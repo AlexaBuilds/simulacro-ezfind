@@ -96,7 +96,8 @@ export default function Navbar() {
          MODAL FLOTANTE (Fondo transparente: se ve la misma web limpia por detrás)
          ========================================================================= */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 backdrop-blur-[1px]">
+        {/* Cambia el z-50 por z-[9999] e inyecta fixed total */}
+        <div className="fixed inset-0 z-[9999] w-screen h-screen flex items-center justify-center bg-black/40 backdrop-blur-sm">
           <div className="bg-white rounded-3xl p-8 w-full max-w-sm mx-4 shadow-2xl border border-gray-100 flex flex-col items-center relative">
             
             {/* 2. Logo que aparece arriba dentro del Modal */}
