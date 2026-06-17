@@ -22,7 +22,7 @@ export default function Navbar() {
         
         {/* 1. Logo principal en la fila de navegación */}
         <div className="flex items-center gap-1 cursor-pointer">
-        <img src="/assets/favicon.png" alt="Ez-Find Goods Logo" className="h-10 w-auto object-contain" />
+        <img src="/favicon.png" alt="Ez-Find Goods Logo" className="h-10 w-auto object-contain" />
         </div>
 
         {/* Botón de Categorías */}
@@ -100,7 +100,7 @@ export default function Navbar() {
           <div className="bg-white rounded-3xl p-8 w-full max-w-sm mx-4 shadow-2xl border border-gray-100 flex flex-col items-center relative">
             
             {/* 2. Logo que aparece arriba dentro del Modal */}
-            <img src="/assets/favicon.png" alt="Ez-Find Goods" className="h-10 w-auto object-contain mb-4" />
+            <img src="/favicon.png" alt="Ez-Find Goods" className="h-10 w-auto object-contain mb-4" />
 
             <h2 className="text-ez-orange text-2xl font-bold mb-6 text-center">
               {isRegistro ? 'Crear Cuenta' : 'Iniciar Sesión'}
