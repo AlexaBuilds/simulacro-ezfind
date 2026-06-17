@@ -20,9 +20,9 @@ export default function Navbar() {
       {/* Fila principal de navegación */}
       <div className="flex items-center justify-between gap-6">
         
-        {/* Logo oficial */}
+        {/* Logo oficial (Corregido con ./) */}
         <div className="flex items-center gap-1 cursor-pointer">
-          <img src="assets/logo.png" alt="Ez-Find Goods Logo" className="h-10 w-auto object-contain" />
+          <img src="./assets/logo.png" alt="Ez-Find Goods Logo" className="h-10 w-auto object-contain" />
         </div>
 
         {/* Botón de Categorías */}
@@ -93,13 +93,14 @@ export default function Navbar() {
       </nav>
 
       {/* =========================================================================
-         MODAL FLOTANTE (Réplica exacta adaptada a Ez-Find Goods)
+         MODAL FLOTANTE (Fondo transparente: se ve la misma web limpia por detrás)
          ========================================================================= */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs animate-fade-in">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-transparent">
           <div className="bg-white rounded-3xl p-8 w-full max-w-sm mx-4 shadow-2xl border border-gray-100 flex flex-col items-center relative">
             
-            <img src="assets/logo.png" alt="Ez-Find Goods" className="h-10 w-auto object-contain mb-4" />
+            {/* Logo oficial (Corregido con ./) */}
+            <img src="./assets/logo.png" alt="Ez-Find Goods" className="h-10 w-auto object-contain mb-4" />
 
             <h2 className="text-ez-orange text-2xl font-bold mb-6 text-center">
               {isRegistro ? 'Crear Cuenta' : 'Iniciar Sesión'}
