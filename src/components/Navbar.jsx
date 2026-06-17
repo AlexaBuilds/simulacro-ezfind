@@ -33,14 +33,23 @@ export default function Navbar() {
           <span>Categorías</span>
         </button>
 
-        {/* Barra de búsqueda */}
+        {/* Barra de búsqueda con accesibilidad corregida */}
         <div className="flex-1 max-w-2xl relative">
-          <input 
+          <label htmlFor="search-input" className="sr-only">Buscar productos</label>
+          <input  
+            id="search-input"
+            name="search"
             type="text" 
             placeholder="Busca las mejores ofertas en Ez-Find Goods..." 
-            className="w-full pl-5 pr-12 py-2.5 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:border-ez-blue focus:bg-white transition-all text-sm shadow-inner"
+            className="w-full pl-5 pr-12 py-2.5 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:border-ez-blue focus:bg-white transition-all text-sm shadow-inner text-gray-900"
           />
-          <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-ez-blue hover:bg-ez-orange text-white p-2 rounded-full transition-colors shadow-sm cursor-pointer">
+          {/* Botón de lupa corregido con aria-label para Lighthouse */}
+          <button 
+            type="button"
+            aria-label="Buscar"
+            title="Buscar"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-ez-blue hover:bg-ez-orange text-white p-2 rounded-full transition-colors shadow-sm cursor-pointer"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.603 10.603z" />
             </svg>
