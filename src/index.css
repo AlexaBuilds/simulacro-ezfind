@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ez-blue: #29bbe3;
+  --color-ez-orange: #fd601d;
+}

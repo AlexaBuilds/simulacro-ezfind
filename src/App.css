@@ -1,0 +1,57 @@
+/* 1. Contenedor del menú: ¡Fuerza la distribución horizontal en una sola línea! */
+.nav-menu-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;          /* Espacio generoso entre palabras como el del profesor */
+  margin: 0;
+  padding: 1rem 0;   /* Margen arriba y abajo */
+  list-style: none;
+}
+
+/* 2. Enlaces limpios sin subrayar y en gris elegante */
+.nav-link-item {
+  color: #4b5563;     /* gray-600 */
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Cambio de color corporativo al pasar el ratón */
+.nav-link-item:hover {
+  color: #fd601d;     /* Tu naranja corporativo */
+}
+
+/* 3. Requisito estricto de accesibilidad por teclado (:focus) */
+.nav-link-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #29bbe3; /* Tu azul corporativo */
+  border-radius: 0.25rem;
+}
+
+/* =========================================================================
+   ANIMACIÓN: El truco de magia para el movimiento infinito automático
+   ========================================================================= */
+.carousel-track {
+  display: flex;
+  width: max-content;
+  gap: 2rem;
+  animation: scrollInfinito 25s linear infinite;
+}
+
+/* Cuando el ratón se posa encima de un producto, el movimiento se congela */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%); /* Desplaza exactamente la longitud de una tanda */
+  }
+}

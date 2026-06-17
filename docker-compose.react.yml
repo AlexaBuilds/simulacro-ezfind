@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  react_dev_simulacro:        # 👈 Nombre de servicio único
+    image: node:24-alpine
+    container_name: react_dev_simulacro # 👈 Contenedor único para evitar choques
+    ports:
+      - "5177:5177"           # Mapeo de puertos en el 5177
+    volumes:
+      - .:/app/simulacro-ezfind
+      - /app/simulacro-ezfind/node_modules
+    working_dir: /app/simulacro-ezfind
+    command: sh -c "npm ci --prefer-offline --no-audit --progress=false && npm run dev -- --host --port 5177"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5177/simulacro-ezfind/ || exit 1"] # Usando curl como tu entorno saas
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    tty: true
