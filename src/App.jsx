@@ -26,14 +26,14 @@ export default function App() {
       <Footer />
 
       {/* =========================================================================
-         MODAL FLOTANTE EN LA RAÍZ (Con tus colores de marca: ez-orange y ez-blue)
-         ========================================================================= */}
+          MODAL FLOTANTE EN LA RAÍZ (Con tus colores de marca: ez-orange y ez-blue)
+          ========================================================================= */}
       {isOpen && (
         <div className="fixed inset-0 z-[10000] w-screen h-screen flex items-center justify-center bg-black/40 backdrop-blur-sm">
           <div className="bg-white rounded-3xl p-8 w-full max-w-sm mx-4 shadow-2xl border border-gray-100 flex flex-col items-center relative">
             
-            {/* Logo dentro del modal */}
-            <img src="./logo.png" alt="Ez-Find Goods" className="h-10 w-auto object-contain mb-4" />
+            {/* Logo dentro del modal - ¡AUMENTADO EL TAMAÑO A h-14! */}
+            <img src="./logo.png" alt="Ez-Find Goods" className="h-14 w-auto object-contain mb-4" />
 
             <h2 className="text-ez-orange text-2xl font-bold mb-6 text-center">
               {isRegistro ? 'Crear Cuenta' : 'Iniciar Sesión'}

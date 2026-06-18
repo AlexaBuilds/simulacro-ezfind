@@ -6,20 +6,30 @@ export default function Navbar({ onOpenLogin }) {
       {/* Fila Principal de la Cabecera */}
       <div className="flex items-center justify-between gap-4 md:gap-6">
         
-        {/* El Logo Principal de Ez-Find (Se adapta el tamaño en móvil) */}
+        {/* El Logo Principal de Ez-Find */}
         <div className="flex items-center gap-1 cursor-pointer shrink-0">
-          <img src="./logo.png" alt="Ez-Find Goods Logo" className="h-7 sm:h-10 w-auto object-contain" />
+          <img src="./logo.png" alt="Ez-Find Goods Logo" className="h-10 sm:h-14 w-auto object-contain" />
         </div>
 
-        {/* Botón de Categorías (En móvil reducimos padding y texto para que quepa) */}
-        <button className="flex items-center gap-1.5 sm:gap-2 bg-ez-orange hover:bg-ez-blue text-white font-semibold px-3 sm:px-4 py-2 rounded-full transition-all duration-300 group shadow-md focus:outline-none cursor-pointer text-xs sm:text-sm shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-300">
+        {/* =========================================================================
+            BOTÓN DE CATEGORÍAS (ESTILO OUTLINED + TAMAÑO PEQUEÑO / COMPACTO)
+            Ajustado con px-3 py-1.5 y text-xs (Equivalente a size="small")
+            ========================================================================= */}
+        <button className="flex items-center gap-1.5 bg-transparent text-ez-orange border-2 border-ez-orange hover:bg-ez-blue hover:border-ez-blue hover:text-white font-semibold px-3 py-1.5 rounded-full transition-all duration-300 group shadow-xs focus:outline-none cursor-pointer text-xs shrink-0">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            strokeWidth="2" 
+            stroke="currentColor" 
+            className="w-3.5 h-3.5 text-ez-orange group-hover:text-white group-hover:rotate-90 transition-all duration-300"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           <span>Categorías</span>
         </button>
 
-        {/* Barra de búsqueda (En móvil se OCULTA de esta fila y se muestra abajo) */}
+        {/* Barra de búsqueda para Escritorio */}
         <div className="hidden md:block flex-1 max-w-2xl relative">
           <label htmlFor="search-input" className="sr-only">Buscar productos</label>
           <input  
@@ -48,7 +58,7 @@ export default function Navbar({ onOpenLogin }) {
             className="flex flex-col items-center cursor-pointer hover:text-ez-blue transition-colors group bg-transparent border-none p-0 focus:outline-none"
             aria-label="Abrir panel de inicio de sesión o registro"
           >
-            <svg xmlns="http://www.w3.org/2000/xl" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-105 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-105 transition-transform">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
             </svg>
             <span className="text-[10px] sm:text-xs mt-0.5 font-medium">Mi Cuenta</span>
@@ -65,7 +75,7 @@ export default function Navbar({ onOpenLogin }) {
         </div>
       </div>
 
-      {/* 🔍 BARRA DE BÚSQUEDA EXCLUSIVA PARA MÓVIL (Solo se ve en pantallas pequeñas) */}
+      {/* 🔍 BARRA DE BÚSQUEDA EXCLUSIVA PARA MÓVIL */}
       <div className="block md:hidden w-full relative mt-1">
         <label htmlFor="search-input-mobile" className="sr-only">Buscar productos</label>
         <input  
@@ -86,9 +96,9 @@ export default function Navbar({ onOpenLogin }) {
         </button>
       </div>
 
-      {/* Menú de navegación horizontal (Permite scroll lateral si no cabe en el móvil) */}
-      <nav className="border-t border-gray-100 pt-2 overflow-x-auto scrollbar-none" aria-label="Navegación secundaria">
-        <ul className="flex items-center gap-6 whitespace-nowrap text-[11px] font-bold tracking-wider text-gray-600 uppercase">
+      {/* Menú de navegación */}
+      <nav className="border-t border-gray-100 pt-2 overflow-x-auto scrollbar-none flex md:justify-center" aria-label="Navegación secundaria">
+        <ul className="flex items-center justify-start md:justify-center gap-6 whitespace-nowrap text-[11px] font-black tracking-widest text-gray-600 uppercase">
           <li><a href="#promos" className="hover:text-ez-orange transition-colors">NUESTRAS PROMOCIONES</a></li>
           <li><a href="#cupones" className="hover:text-ez-orange transition-colors">CUPONES EXCLUSIVOS</a></li>
           <li><a href="#novedades" className="hover:text-ez-orange transition-colors">LO NUEVO</a></li>
