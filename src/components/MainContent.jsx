@@ -154,9 +154,10 @@ export default function MainContent() {
             
             <div className="flex flex-col gap-4">
               <span className="text-ez-blue font-bold text-xs tracking-widest uppercase">Encuéntranos</span>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Nuestras Tiendas Físicas</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Puntos de Envío de Mondial Relay</h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                No solo somos online. Visita nuestros puntos físicos para recoger tus pedidos o recibir asesoramiento personalizado en un entorno limpio y minimalista.
+                Visita nuestros puntos físicos para recoger tus pedidos o recibir asesoramiento personalizado. Puede seleccionar un punto de envío de Mondial Relay, si prefiere recoger su pedido en nuestros puntos de recogida.
+
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
